@@ -17,13 +17,20 @@ body {
 }
 
 
-
+/* cabeçalho*/
 herder {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
     position: relative;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header h1 {
@@ -47,7 +54,16 @@ nav a:hover {
     border-radius: 5px
 }
 
+/* curiosidades */
+ol {
+    list-style-position: inside;
+    text-align: center;
+  }
+  
+/* seções*/
 section {
+    width: 80%;
+    max-width: 900px;
     padding: 20px;
     margin: 20px auto;
     max-width: 1000px;
@@ -57,7 +73,7 @@ section {
     text-align: center;
 }
 
-h3 {
+h3, h2 {
     color: #333;
     margin-bottom: 10px;
 }
@@ -67,11 +83,24 @@ section img {
     margin-bottom: 20px;
 }
 
+
+/* tabela */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-}
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #333;
+    color: white;
+  }
 
 
 /* lista dos contatos */
