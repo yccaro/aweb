@@ -1,79 +1,85 @@
+/* Reseta as margens, o padding e o box-sizing para todos os elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Definindo a fonte e o layout do corpo da página */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: white;
+    background-color: #f4f4f4;
     color: #333;
-    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-
-/* cabeçalho*/
-herder {
+/* Cabeçalho */
+header {
     background-color: #333;
     color: white;
-    text-align: center;
+    width: 100%;
     padding: 20px;
-    position: relative;
+    text-align: center;
 }
 
-.header-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header h1 {
+.header-content h1 {
     font-size: 2.5em;
 }
 
-nav {
+header nav {
     margin-top: 10px;
 }
 
-nav a {
-    color: #333;
+header nav a {
+    color: white;
     text-decoration: none;
-    padding: 10px;
     margin: 0 15px;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
+header nav a:hover {
     background-color: #555;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
-/* curiosidades */
-ol {
-    list-style-position: inside;
+/* Seção Hero */
+#hero {
+    background-color: #1a1a1a;
+    color: white;
     text-align: center;
-  }
-  
-/* seções*/
+    padding: 50px 20px;
+}
+
+#hero .hero-content h2 {
+    font-size: 2.5em;
+}
+
+.hero-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+/* Seções gerais */
 section {
     width: 80%;
-    max-width: 900px;
+    max-width: 1000px;
     padding: 20px;
     margin: 20px auto;
-    max-width: 1000px;
-    background-color:white;
+    background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-h3, h2 {
+h2, h3 {
     color: #333;
     margin-bottom: 10px;
 }
@@ -83,27 +89,31 @@ section img {
     margin-bottom: 20px;
 }
 
+/* Lista de curiosidades */
+ol {
+    list-style-position: inside;
+    text-align: left;
+}
 
-/* tabela */
+/* Tabelas de Educação */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-  }
-  
-  table th, table td {
+}
+
+table th, table td {
     padding: 10px;
     text-align: left;
     border: 1px solid #ddd;
-  }
-  
-  table th {
+}
+
+table th {
     background-color: #333;
     color: white;
-  }
+}
 
-
-/* lista dos contatos */
+/* Lista de Contatos */
 ul {
     list-style-type: none;
     padding: 0;
@@ -114,13 +124,12 @@ ul li {
     font-size: 1.1em;
 }
 
-
-/* rodapé */
+/* Rodapé */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 15px;
     width: 100%;
-    margin-top: 20px
+    margin-top: 20px;
 }
