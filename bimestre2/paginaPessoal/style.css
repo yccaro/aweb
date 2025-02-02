@@ -1,135 +1,232 @@
-/* Reseta as margens, o padding e o box-sizing para todos os elementos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Cores */
+:root {
+    --cor-principal: #2C3E50;
+    --cor-secundaria: #F4F1EB;
+    --cor-destaque: #D4AF37;
+    --cor-texto: #1D1D1D;
+    --cor-fundo: #F4F4F4;
 }
 
-/* Definindo a fonte e o layout do corpo da página */
+/* Body */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--cor-fundo);
+    margin: 0;
+    padding: 0;
+    color: var(--cor-texto);
 }
 
 /* Cabeçalho */
 header {
-    background-color: #333;
+    background-color: var(--cor-principal);
     color: white;
-    width: 100%;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.header-content h1 {
-    font-size: 2.5em;
+header h1 {
+    font-size: 24px;
+    margin: 0;
 }
 
-header nav {
+nav {
     margin-top: 10px;
 }
 
-header nav a {
+nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    margin-right: 15px;
 }
 
-header nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
+nav a:hover {
+    text-decoration: underline;
 }
 
 /* Seção Hero */
 #hero {
-    background-color: #1a1a1a;
-    color: white;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-#hero .hero-content h2 {
-    font-size: 2.5em;
+#hero h2 {
+    font-size: 36px;
+    margin: 0;
 }
 
 .hero-img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    border: 5px solid var(--cor-destaque);
     object-fit: cover;
     margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Seções gerais */
-section {
-    width: 80%;
-    max-width: 1000px;
-    padding: 20px;
-    margin: 20px auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* Seção Sobre */
+#sobre {
+    padding: 40px 20px;
     text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-h2, h3 {
-    color: #333;
-    margin-bottom: 10px;
+#sobre p {
+    font-size: 18px;
+    color: var(--cor-texto);
 }
 
-section img {
-    border-radius: 50%;
+/* Seção de Cards (Curiosidades) */
+.cards-container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    break-inside: avoid-column;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h4 {
+    font-size: 20px;
+    color: var(--cor-principal);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Títulos centralizados para todas as seções */
+#CURIOSIDADES h3,
+#CAUSOS h3,
+#HABILIDADES h3,
+#CONTATOS h3 {
+    text-align: center;
+    font-size: 30px;
+    color: var(--cor-principal);
     margin-bottom: 20px;
 }
 
-/* Lista de curiosidades */
-ol {
-    list-style-position: inside;
-    text-align: left;
+/* Seção de Curiosidades */
+#CURIOSIDADES h3 {
+    margin-top: 40px;
 }
 
-/* Tabelas de Educação */
-table {
+/* Seção de Educação */
+#EDUCACAO {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#EDUCACAO table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
-table th, table td {
-    padding: 10px;
-    text-align: left;
+#EDUCACAO th, #EDUCACAO td {
+    padding: 12px;
     border: 1px solid #ddd;
+    text-align: left;
 }
 
-table th {
-    background-color: #333;
+#EDUCACAO th {
+    background-color: var(--cor-principal);
     color: white;
 }
 
-/* Lista de Contatos */
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Seção de Causos */
+#CAUSOS {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-ul li {
-    margin: 5px;
-    font-size: 1.1em;
+/* Seção de Habilidades */
+#HABILIDADES {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    color: var(--cor-principal);
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#HABILIDADES p {
+    font-size: 18px;
+    color: var(--cor-texto);
+}
+
+/* Seção de Contatos */
+#CONTATOS {
+    padding: 40px 20px;
+    background-color: var(--cor-principal);
+    color: white;
+    text-align: center;
+}
+
+#CONTATOS h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#CONTATOS ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#CONTATOS ul li {
+    margin: 10px 0;
+}
+
+#CONTATOS ul li a {
+    color: #F4F1EB;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#CONTATOS ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Rodapé */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 20px;
     text-align: center;
-    padding: 15px;
-    width: 100%;
-    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 18px;
 }
