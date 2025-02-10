@@ -42,18 +42,24 @@ header {
 header h1 {
     font-size: 24px;
 }
-nav {
-    margin-top: 10px;
+nav ul {
+    list-style: none;
+    display: flex;
 }
-nav a {
-    color: var(--cor-secundaria);
+
+nav ul li a {
     text-decoration: none;
-    margin-right: 15px;
-    text-align: right;
-    justify-content: end;
+    color: var(--primary-color);
+    display: inline-block;
+    padding: 0px 5px;
 }
-nav a:hover {
-    text-decoration: underline;
+nav ul li{
+    padding: 0px 20px;
+    transition: transform 0.3s ease-in-out 
+}
+
+nav ul li:hover {
+    transform: scale(1.1); 
 }
 .hero {
     grid-column: 1 / -1;
