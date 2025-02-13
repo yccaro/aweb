@@ -147,6 +147,7 @@ nav ul li:hover {
 .espaco {
     height: 100px;
 }
+
 #SOBRE, #CURIOSIDADES {
     grid-column: 3 / 11;
     padding: 40px 20px;
@@ -154,7 +155,8 @@ nav ul li:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: justify;
-    margin-top: 100px;
+    margin-top: 130px;
+    scroll-margin-top: 150px;
 }
 #SOBRE p, #CURIOSIDADES p {
     font-size: 18px;
