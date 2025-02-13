@@ -22,16 +22,6 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
-/* header {
-    grid-column: 1 / -1;
-    background-color: var(--cor-principal);
-    color: var(--cor-secundaria); */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
-    /* height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
 .fotoNome {
     display: flex;
     align-items: center;
@@ -45,14 +35,6 @@ header img {
 header h1 {
     font-size: 24px;
 }
-/* .topo {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    justify-content: space-between;
-} */
 nav{
     display: flex;
     justify-content: space-between;
@@ -147,7 +129,6 @@ nav ul li:hover {
 .espaco {
     height: 100px;
 }
-
 #SOBRE, #CURIOSIDADES {
     grid-column: 3 / 11;
     padding: 40px 20px;
@@ -253,7 +234,6 @@ footer p {
         padding: 10px; 
         z-index: 10; 
     }
-
     nav ul {
         display: flex;
         justify-content: center;
@@ -275,13 +255,6 @@ footer p {
         font-size: 20px; 
         color: var(--cor-secundaria); 
     }
-    /* .topo {
-        width: 90%;
-        border-radius: 10px;
-        height: 100px;
-        justify-content: space-between;
-        background-color: var(--cor-principal);
-    } */
     .fotoNome{
         gap: 10px;
         justify-content: start;
@@ -298,11 +271,10 @@ footer p {
     .hero {
         flex-direction: column;
         text-align: center;
-        height: calc(100vh - 150px);
+        height: calc(100vh - 100px);
         display: block;
         gap: 30px;
         padding: 0;
-        margin-top: 50px;
     }
     .botao {
         width: 80%;
@@ -338,7 +310,6 @@ footer p {
         font-size: 40px;
         margin-bottom: 10px;
         text-align: center;
-
         font-family: 'fontYcaro', sans-serif;
     }
     #SOBRE h3, #CURIOSIDADES h3{
