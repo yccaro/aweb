@@ -239,17 +239,39 @@ footer p {
     }
     nav {
         grid-column: 1/-1;
-        width: 90%;
-        height: 100px;
+        width: 90%; 
+        height: 100px; 
+        background-color: var(--cor-principal); 
         border-radius: 30px;
         position: fixed;
         top: 87vh;
-        bottom: 0;
+        bottom: 0; 
         align-items: center;
         justify-content: space-between;
+        padding: 10px; 
+        z-index: 10; 
     }
-    li a {
-        display: none;
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    nav ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul li a span {
+        display: none; 
+    }
+    nav ul li a i {
+        font-size: 20px; 
+        color: var(--cor-secundaria); 
     }
     /* .topo {
         width: 90%;
@@ -261,6 +283,7 @@ footer p {
     .fotoNome{
         gap: 10px;
         justify-content: start;
+        margin-left: 15px;
     }
     .fotoNome img {
         width: 60px;
